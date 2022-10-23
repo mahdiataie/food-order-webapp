@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import Header from "./componnents/Layout/Header";
-
 import Meals from "./componnents/Meals/Meals";
 import Cart from "./componnents/Card/Cart";
 import CartProvider from "./store/CartProvider";
@@ -25,6 +24,8 @@ function App() {
   const submitCloseHandler = () => {
     setSubmitionIsShown(false);
   };
+
+
   return (
     <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} onOrder={orderHandler} />}
